@@ -16,10 +16,11 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Your turn!</h1>
       <div class="game-container">
         {
           tableNums.map((num, key) => {
-            return <div name={num} key={key} className="cell" onClick={() => playerMove(num)}></div>
+            return <div name={num} key={key} className="cell" onClick={() => playerMove(num)}>{board[num]}</div>
           })
         }
       </div>
